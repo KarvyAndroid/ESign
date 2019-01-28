@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@mipmap/ic_logo" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/process_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/otp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="OTP"
+                    android:textColor="@color/black"
+                    android:theme="@style/checkBoxStyle" />
+
+                <RadioButton
+                    android:id="@+id/fp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bio-Metric"
+                    android:textColor="@color/black"
+                    android:theme="@style/checkBoxStyle" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_user"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="User ID"
+                android:inputType="number"
+                android:maxLength="12"
+                android:paddingLeft="7dp" />
+
+            <EditText
+                android:id="@+id/et_agency_code"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="Agency Code"
+                android:inputType="number"
+                android:paddingLeft="7dp" />
+
+            <EditText
+                android:id="@+id/et_agency_tid"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="AgencyTransactionID"
+                android:inputType="number"
+                android:paddingLeft="7dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="For pan exempt case enter  PAN_EXEMPT" />
+
+            <EditText
+                android:id="@+id/et_pan"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="Pan Number"
+                android:inputType="text"
+                android:maxLength="10"
+                android:paddingLeft="7dp"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/et_pan_name"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="Pan Name"
+                android:inputType="text"
+                android:paddingLeft="7dp" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="Mobile"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="7dp" />
+
+
+            <EditText
+                android:id="@+id/et_emailid"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="EmailID"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="7dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="IPV Details"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/ipv_groupo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Yes"
+                    android:textColor="@color/black"
+                    android:theme="@style/checkBoxStyle" />
+
+                <RadioButton
+                    android:id="@+id/no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textColor="@color/black"
+                    android:theme="@style/checkBoxStyle" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_emp_name"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="Employee Name"
+                android:inputType="text"
+                android:paddingLeft="7dp" />
+
+            <EditText
+                android:id="@+id/et_emp_desig"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="Employee Desigantion"
+                android:inputType="text"
+                android:paddingLeft="7dp" />
+
+            <EditText
+                android:id="@+id/et_emp_code"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="Employee Code"
+                android:inputType="number"
+                android:paddingLeft="7dp" />
+
+            <EditText
+                android:id="@+id/et_emp_location"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_border"
+                android:hint="Employee Location"
+                android:inputType="text"
+                android:paddingLeft="7dp" />
+
+            <Button
+                android:id="@+id/open_ekyc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:text="Continue" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
